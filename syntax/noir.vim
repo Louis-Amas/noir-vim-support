@@ -20,14 +20,9 @@ hi def link noirBuiltinType       Type
 
 syn match   noirOperator          /\(!\||\|&\|+\|-\|<\|>\|=\|%\|\/\|*\|\~\|\^\)/
 syn match   noirNumber            /\<-\=\d\+L\=\>\|\<0[xX]\x\+\>/
-syn match   noirFloat             /\<-\=\%(\d\+\.\d\+\|\d\+\.\|\.\d\+\)\%([eE][+-]\=\d\+\)\=\>/
-syn region  noirString            start=+"+  skip=+\\\\\|\\$"+  end=+"+
-syn region  noirString            start=+'+  skip=+\\\\\|\\$'+  end=+'+
 
 hi def link noirOperator          Operator
 hi def link noirNumber            Number
-hi def link noirFloat             Float
-hi def link noirString            String
 
 " Function
 syn match   noirFunction          /\<function\>/ nextgroup=noirFuncName,noirFuncArgs skipwhite
