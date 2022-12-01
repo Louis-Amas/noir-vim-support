@@ -27,8 +27,6 @@ hi def link noirNumber            Number
 " Function
 syn match   noirFunction          /\<fn\>/ nextgroup=noirFuncName,noirFuncArgs skipwhite
 syn match   noirFuncName          contained /\<[a-zA-Z_$][0-9a-zA-Z_$]*/ nextgroup=noirFuncArgs skipwhite
-syn region  noirFuncReturns       contained matchgroup=noirFuncParens start='(' end=')' contains=noirFuncArgCommas,noirBuiltinType
-syn match   noirFuncArgCommas     contained ','
 
 hi def link noirFunction          Type
 hi def link noirFuncName          Function
